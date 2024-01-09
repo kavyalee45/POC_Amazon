@@ -1,28 +1,15 @@
 package testCase;
 
-import java.time.Duration;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import pageObjects.AmazonPage;
 import pageObjects.RecieveMailPage;
+import testBase.BaseClass;
 
-public class RecieveMailTest {
+public class RecieveMailTest extends BaseClass{
 	
-	WebDriver driver;
-	@BeforeClass
-	public void setUp() {
-		driver =new EdgeDriver();
-		//delete all cookies
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().window().maximize();
-		driver.navigate().to("https://gmail.com/");
- 
-	}
-	@Test
+	
+	@Test(priority=1)
 	public void Gmaillogin() throws InterruptedException {
 		//object
 		RecieveMailPage rm = new RecieveMailPage(driver);
@@ -32,9 +19,20 @@ public class RecieveMailTest {
 		rm.password("RAMUSEETHA");
 		rm.next();
 		rm.listmail();
-		//rm.Nxt();
+		rm.clickLink();
 	
  
 	}
+	
+	@Test(priority=2)
+	public void createAccount() throws InterruptedException {
 
+		AmazonPage am = new AmazonPage(driver);
+		am.clickSignin();
+		am.Enteremail("9398679142");
+		am.continueclick();
+		am.enterPassword("Bhavya@123");
+		am.clicksubmit();
+
+}
 }

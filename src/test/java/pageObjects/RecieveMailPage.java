@@ -1,6 +1,8 @@
 package pageObjects;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -47,6 +49,17 @@ public class RecieveMailPage extends BasePage{
 	   		  if(Options.get(i).getText().equals("Ammazon Link")) {
 	   			  Options.get(i).click();
 	   			  break;  }  } }
+	
+	public void clickLink() {
+		linkclick.click();
+		Set<String> windowids = driver.getWindowHandles();
+		  List<String> windowslist = new ArrayList(windowids); //to retrieve ids 
+		  String parentID = windowslist.get(0); 
+		  String childID = windowslist.get(1);
+		  driver.switchTo().window(childID);
+	}
+	
+	
 	
 
 
