@@ -15,30 +15,32 @@ public class SendMailPage extends BasePage {
 	@FindBy(id = "identifierId")
 	WebElement emailID;
 
-	@FindBy(xpath = "//*[@id=\"identifierNext\"]/div/button/span")
+	@FindBy(xpath = "//*[@id='identifierNext']/div/button/span")
 	WebElement emailNext;
 
 	@FindBy(name = "Passwd")
 	WebElement password;
 
-	@FindBy(xpath = "//*[@id=\\\"passwordNext\\\"]/div/button/span")
+	@FindBy(xpath = "//*[@id='passwordNext']/div/button/span")
 	WebElement passwordNext;
 
 	@FindBy(xpath = "//div[contains(text(),'Compose')]")
 	WebElement compose;
 
-	@FindBy(xpath = "//input[@id=':bq']")
+	@FindBy(xpath = "//input[contains(@class,'agP')]")
 	WebElement toBox;
 
-	@FindBy(xpath = "//input[@id=':84']")
+	@FindBy(name = "subjectbox")
 	WebElement subjectBox;
 
-	@FindBy(xpath = "//div[@id=':9e']")
+	@FindBy(xpath = "//div[@class='Am aiL Al editable LW-avf tS-tW']")
 	WebElement message;
 
-	@FindBy(xpath = "//div[@id=':7u']")
+	@FindBy(xpath = "//div[text()='Send']")
 	WebElement sendBtn;
-
+	
+	
+	
 	// action methods
 	public void enterEmail(String email) {
 		emailID.sendKeys(email);
@@ -46,24 +48,29 @@ public class SendMailPage extends BasePage {
 	}
 
 	public void enterPassword(String pswd) {
-		emailID.sendKeys(pswd);
+		password.sendKeys(pswd);
 		passwordNext.click();
 	}
 
 	public void clickCompose() {
+		
 		compose.click();
+		
 	}
 
 	public void enterToreciepient(String rec) {
-		emailID.sendKeys(rec);
+		
+		toBox.sendKeys(rec);
+		
+		
 	}
 
 	public void enterSubject(String sub) {
-		emailID.sendKeys(sub);
+		subjectBox.sendKeys(sub);
 	}
 
 	public void enterMessage(String msg) {
-		emailID.sendKeys(msg);
+		message.sendKeys(msg);
 	}
 
 	public void clickSend() {
