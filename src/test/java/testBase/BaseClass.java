@@ -24,7 +24,7 @@ public class BaseClass {
 		
 	}
 	
-	@AfterTest 
+	@AfterTest //close
 	public void tearDown() {
 		driver.close();
 	}
