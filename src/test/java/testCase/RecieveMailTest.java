@@ -3,6 +3,7 @@ package testCase;
 import org.testng.annotations.Test;
 
 import pageObjects.AmazonPage;
+import pageObjects.AmazonSearchFunctionality;
 import pageObjects.RecieveMailPage;
 import testBase.BaseClass;
 
@@ -35,4 +36,15 @@ public class RecieveMailTest extends BaseClass{
 		am.clicksubmit();
 
 }
+	@Test(priority=3)
+	public void searchFunctionality() {
+		AmazonSearchFunctionality as=new AmazonSearchFunctionality(driver);
+		as.EnterSearch("Laptop");
+		as.clickSearch();
+		as.EnterinSearch("Laptpp");
+		as.clickinSearch();
+		as.selectDropdown();
+		as.item();
+		as.clickSearch2();
+	}
 }

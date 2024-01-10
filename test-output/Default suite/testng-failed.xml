@@ -9,6 +9,7 @@
           <include name="Gmaillogin"/>
           <include name="createAccount"/>
           <include name="setup"/>
+          <include name="searchFunctionality"/>
         </methods>
       </class> <!-- testCase.RecieveMailTest -->
     </classes>
