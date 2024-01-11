@@ -12,7 +12,7 @@ public class BaseClass {
 	public WebDriver driver;
 	
 	
-	@BeforeTest
+	@BeforeTest // driver launch
 	public void setup() {
 		
 		 driver = new EdgeDriver();
