@@ -12,7 +12,7 @@ public class BaseClass {
 	public WebDriver driver;
 	
 	
-	@BeforeTest // driver launch
+	@BeforeTest 
 	public void setup() {
 		
 		 driver = new EdgeDriver();
@@ -24,7 +24,7 @@ public class BaseClass {
 		
 	}
 	
-	@AfterTest //close
+	@AfterTest 
 	public void tearDown() {
 		driver.close();
 	}
