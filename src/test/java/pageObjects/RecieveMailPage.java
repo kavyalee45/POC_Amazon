@@ -26,9 +26,11 @@ public class RecieveMailPage extends BasePage{
 	@FindBy(xpath="//*[@id=\"passwordNext\"]/div/button")
 	WebElement Next;
 	
-	@FindBy(xpath="//span[@class='bqe']")
+	@FindBy(xpath="//span[text()='Ammazon Link']")
 	List<WebElement> Options;
-	
+//	@FindBy(xpath="//span[@class='bqe']")
+//	List<WebElement> Options;
+//	
 	@FindBy(linkText="https://www.amazon.in/")
 	WebElement linkclick;
 	

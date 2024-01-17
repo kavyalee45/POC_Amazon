@@ -12,11 +12,11 @@ public class SendMailTest extends BaseClass {
 	public void sendMail() throws InterruptedException {
 		//object
 		SendMailPage sm = new SendMailPage(driver);
-		sm.enterEmail("sophie234sam@gmail.com");
-		sm.enterPassword("sam@456sophie");
+		sm.enterEmail(prop.getProperty("emailID"));
+		sm.enterPassword(prop.getProperty("Password"));
 		sm.clickCompose();
 		Thread.sleep(3000);
-		sm.enterToreciepient("ram021seetha@gmail.com");
+		sm.enterToreciepient(prop.getProperty("reciepientId"));
 		sm.enterSubject("Gemmart links");
 		sm.enterMessage("https://gemmartusa.com/");
 		sm.clickSend();

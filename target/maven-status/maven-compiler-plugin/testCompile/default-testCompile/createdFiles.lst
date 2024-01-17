@@ -1,0 +1,8 @@
+pageObjects\AmazonSearchFunctionality.class
+testCase\RecieveMailTest.class
+pageObjects\AmazonPage.class
+pageObjects\SendMailPage.class
+testCase\SendMailTest.class
+pageObjects\BasePage.class
+pageObjects\RecieveMailPage.class
+testBase\BaseClass.class

@@ -6,10 +6,9 @@
       <class name="testCase.RecieveMailTest">
         <methods>
           <include name="tearDown"/>
-          <include name="Gmaillogin"/>
-          <include name="createAccount"/>
           <include name="setup"/>
           <include name="searchFunctionality"/>
+          <include name="addToCart"/>
         </methods>
       </class> <!-- testCase.RecieveMailTest -->
     </classes>
